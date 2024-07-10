@@ -43,3 +43,85 @@ summary.lm(age)
 ```
 for model length~age r^2 = .51, this is less than the adjusted r^2 for neck so this model is not as good as the neck model  
 
+## length based on head length 
+
+
+```{r}
+headL <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(headL)
+summary.lm(headL)
+```
+
+Adjusted r^2 = .84. this is better than the r^2 of length~neck, this means that model length~headlen is better 
+
+
+## length based on head width
+
+
+```{r}
+headw <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(headw)
+summary.lm(headw)
+```
+
+
+adjusted r^2 = .53
+
+the adjusted r^2 for headlen is better than headwth 
+Length~HEADLEN is better than length~HEADWTH
+
+
+## length based on chest 
+
+
+
+```{r}
+chest <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(chest)
+summary.lm(chest)
+```
+
+adjusted r^2 = 0.79 
+
+The adjusted r^2 for head length is 0.84 
+This shows that model length~headlen is better than model length~chest 
+
+
+
+
+
+## length based on sex
+
+
+
+
+```{r}
+sex <- lm(LENGTH~SEX,data=bears)
+plot(LENGTH~SEX,data=bears)
+summary.lm(sex)
+```
+
+
+The adjusted r^2 = -0.0084
+adjusted r^2 for length~headlen is .84 
+
+this shows that length~headlen is better than length~sex
+
+
+
+## length based on weight 
+
+```{r}
+weight <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(weight)
+summary.lm(weight)
+```
+
+
+The adjusted r^2 = 0.74   
+the adjusted r^2 for length~headlen is 0.84   
+this shows that length~headlen is better than length~weight  
