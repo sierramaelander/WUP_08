@@ -125,3 +125,11 @@ summary.lm(weight)
 The adjusted r^2 = 0.74   
 the adjusted r^2 for length~headlen is 0.84   
 this shows that length~headlen is better than length~weight  
+
+
+
+### Conclusion
+
+In conclusion the best model is LENGTH~HEADLEN is the best model it had the highest Adjusted r^2 which was 0.84 and all other models had lower scores. 
+
+
